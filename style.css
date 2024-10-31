@@ -1,0 +1,77 @@
+/* Reset enkele standaard marges en paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+}
+
+/* Navigatiebalk */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Hoofdinhoud */
+h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p, ul {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+/* Content Div */
+div {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer (optioneel) */
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
