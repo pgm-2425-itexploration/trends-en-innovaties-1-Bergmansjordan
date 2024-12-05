@@ -3,6 +3,21 @@
 {% block title %}Projecten - Django Website{% endblock %}
 
 {% block content %}
-<h1>Showcase van Projecten</h1>
-<p>Lijst van projecten die met Django zijn gemaakt.</p>
+<h1>Mijn Projecten</h1>
+<p>Hier is een overzicht van de projecten die we hebben gebouwd:</p>
+
+{% if projects %}
+    <ul>
+        {% for project in projects %}
+            <li>
+                <h2>{{ project.title }}</h2>
+                <p><strong>Technologieën:</strong> {{ project.technology }}</p>
+                <p>{{ project.description }}</p>
+                <p><em>Toegevoegd op: {{ project.created_at|date:"d M Y" }}</em></p>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Er zijn momenteel geen projecten beschikbaar.</p>
+{% endif %}
 {% endblock %}

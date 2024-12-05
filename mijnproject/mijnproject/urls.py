@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from mijnapp import views  # Vervang 'myapp' door de naam van jouw app
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),  # Ingebouwde login/logout
     path('', include('mijnapp.urls')),  # Verbindt mijnapp.urls
     
 ]

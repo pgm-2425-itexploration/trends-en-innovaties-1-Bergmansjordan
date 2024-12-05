@@ -125,6 +125,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+LOGIN_URL = '/accounts/login/'  # Waar gebruikers heen gaan als ze proberen een beveiligde route te openen
+LOGIN_REDIRECT_URL = '/user/'  # Waar gebruikers heen gaan na inloggen
+LOGOUT_REDIRECT_URL = '/'  # Waar gebruikers heen gaan na uitloggen
 
 # Locatie waar verzamelde statische bestanden worden opgeslagen
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

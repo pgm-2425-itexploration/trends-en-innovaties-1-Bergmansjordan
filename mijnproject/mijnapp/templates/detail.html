@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Details over Django{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+{% for section in sections %}
+    <h2>{{ section.heading }}</h2>
+    <p>{{ section.content }}</p>
+{% endfor %}
+<h1>Meer over Django</h1>
+
+<h2>Wat is Django?</h2>
+<p>
+    Django is een high-level webframework dat in Python is geschreven. Het is ontworpen om de ontwikkeling van webapplicaties eenvoudiger 
+    en efficiënter te maken. Django wordt geleverd met een ingebouwde admin-interface, een krachtige ORM (Object Relational Mapper), 
+    en een sterke focus op beveiliging.
+</p>
+
+<h2>Waarom kiezen voor Django?</h2>
+<ul>
+    <li><strong>Volledig pakket:</strong> Het bevat alles wat je nodig hebt, van authenticatie tot caching en databasebeheer.</li>
+    <li><strong>Open Source:</strong> Django is gratis en heeft een actieve community die voortdurend verbeteringen en updates biedt.</li>
+    <li><strong>Flexibiliteit:</strong> Het werkt goed met verschillende databases zoals SQLite, PostgreSQL, MySQL en zelfs NoSQL-oplossingen.</li>
+</ul>
+
+<h2>Voorbeelden van websites gebouwd met Django</h2>
+<ul>
+    <li><strong>Instagram:</strong> Beheert miljoenen gebruikers en content.</li>
+    <li><strong>Pinterest:</strong> Voor snelle en schaalbare beeldweergaven.</li>
+    <li><strong>The Washington Post:</strong> Voor het beheren van grootschalige journalistieke content.</li>
+</ul>
+{% endblock %}

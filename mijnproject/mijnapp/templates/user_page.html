@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Gebruikerspagina{% endblock %}
+
+{% block content %}
+<h1>Welkom, {{ user.username }}!</h1>
+<p>Je bent ingelogd op je account. Hier zijn je opties:</p>
+
+<ul>
+    <li><a href="#">Mijn Profiel</a></li>
+    <li><a href="#">Mijn Instellingen</a></li>
+    <li><a href="#">Projecten</a></li>
+</ul>
+
+<p>Niet tevreden? <a href="{% url 'logout' %}">Log uit</a></p>
+{% endblock %}

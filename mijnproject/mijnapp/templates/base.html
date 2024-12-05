@@ -17,8 +17,23 @@
             <li><a href="{% url 'tutorials' %}">Tutorials</a></li>
             <li><a href="{% url 'code_snippets' %}">Code Snippets</a></li>
             <li><a href="{% url 'resources' %}">Resources</a></li>
-            <li><a href="{% url 'projects' %}">Projecten</a></li>
             <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'detail' %}">detail</a></li>
+             {% if user.is_authenticated %}
+    <li><a href="{% url 'user_page' %}">Mijn pagina</a></li>
+    <li><a href="{% url 'projects' %}">Projecten</a></li>
+    <li>
+        <form action="{% url 'logout' %}" method="post" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit" style="background:none; border:none; color:blue; cursor:pointer;">
+                Uitloggen
+            </button>
+        </form>
+    </li>
+{% else %}
+    <li><a href="{% url 'login' %}">Inloggen</a></li>
+    <li><a href="{% url 'signup' %}">Registreren</a></li>
+{% endif %}
         </ul>
     </nav>
     <div>
